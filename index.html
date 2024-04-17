@@ -28,12 +28,12 @@
     <section>
         <div class="con">
             <div class="one">
-                <a href="#" title="instagram icons" class="firstchild"><img style="--clr:#e5b79a"
-                        src="linkedin.png" alt=""></a>
-                <a class="secchild" href="#" title="instagram icons"><img style="--clr:#ad2955"
-                        src="instagram.png" alt=""></a>
-                <a class="thirdchild" href="#" title="instagram icons"><img style="--clr:#b276b2"
-                        src="facebook.png" alt=""></a>
+                <a href="#" title="instagram icons" class="firstchild"><img style="--clr:#e5b79a" src="linkedin.png"
+                        alt=""></a>
+                <a class="secchild" href="#" title="instagram icons"><img style="--clr:#ad2955" src="instagram.png"
+                        alt=""></a>
+                <a class="thirdchild" href="#" title="instagram icons"><img style="--clr:#b276b2" src="facebook.png"
+                        alt=""></a>
 
             </div>
             <div class="two">
@@ -279,6 +279,48 @@
         <div class="heading">
             <h3>Projects</h3>
         </div>
+        <div class="projects-container">
+            <div class="project-card" onclick="goto('https://yusufsaify.github.io/cinema/cinemaplus.html')">
+                <div class="project-img">
+                    <img src="https://e1.pxfuel.com/desktop-wallpaper/400/487/desktop-wallpaper-movie-collage-90s-movie-poster.jpg"
+                        alt="Project Image">
+                </div>
+                <div class="project-details">
+                    <h3 class="project-title">CINEMA+</h3>
+                    <p class="project-overview">Experience the magic of cinema with our innovative platform,  personalized movie recommendations..</p>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-img">
+                    <img src="https://images.pexels.com/photos/1629212/pexels-photo-1629212.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200&amp;h=450&amp;dpr=1"
+                        alt="Project Image">
+                </div>
+                <div class="project-details">
+                    <h3 class="project-title">KNOTWRITE</h3>
+                    <p class="project-overview">Elevate your productivity with our intuitive notes making app, designed to streamline organization and enhance collaboration effortlessly.</p>
+                </div>
+            </div>
+
+            <div class="project-card" >
+                <div class="project-img">
+                    <img src="https://images.pexels.com/photos/242492/pexels-photo-242492.jpeg"
+                        alt="Project Image">
+                </div>
+                <div class="project-details">
+                    <h3 class="project-title">NEWS4U</h3>
+                    <p class="project-overview">Stay informed with our dynamic news website, delivering curated content and real-time updates on global events, tailored to your interests.
+
+
+
+
+
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
     </div>
     <div class="about">
         <div class="heading">
@@ -288,27 +330,28 @@
             <img src="x02DEApLIZWDFwz-Man-PNG-Pic.png" alt="">
         </div>
         <div class="abouttwo">
-            <p>Hello and welcome to my personal website! My name is <span>Yusuf Saify</span> , and I am a passionate web developer
+            <p>Hello and welcome to my personal website! My name is <span>Yusuf Saify</span> , and I am a passionate web
+                developer
                 with 3 years of experience in the field. I specialize in creating dynamic and
                 user-friendly websites that not only look great but also provide seamless user experience.
-                <br>                <br>
+                <br> <br>
                 I have always been fascinated by the ever-evolving world of technology, especially the internet. As a
                 web developer, I get to combine my creativity and technical skills to build websites that are not only
                 aesthetically pleasing but also functional and optimized for search engines.
-                <br>                <br>
+                <br> <br>
                 Over the years, I have worked on various projects, ranging from small businesses to large corporations,
                 and each project has taught me something new. My expertise lies in front-end development, including
                 HTML, CSS, and JavaScript, but I am also well-versed in back-end technologies like PHP and MySQL.
-                <br>                <br>
+                <br> <br>
                 What sets me apart from other web developers is my attention to detail and my ability to understand the
                 client's needs. I believe in a collaborative approach to every project, where the client is involved at
                 every stage of the development process. This ensures that the final product meets their expectations and
                 delivers the desired results.
-                <br>                <br>
+                <br> <br>
                 Apart from my technical skills, I am also a great communicator, and I always strive to maintain a
                 positive working relationship with my clients. I understand that every client has unique requirements,
                 and I am always ready to go the extra mile to ensure their satisfaction.
-                <br>                <br>
+                <br> <br>
                 Thank you for visiting my website, and I look forward to working with you soon. Please feel free to
                 <span>Contact Me</span> if you have any questions or if you would like to discuss a project.
             </p>
@@ -415,6 +458,12 @@
     s.forEach((e1) => obs.observe(e1));
 
 
+    function goto(link) {
+    const newTab = window.open();
+    newTab.opener = null;
+    newTab.location.href = link;
+
+}
 
 
 
@@ -520,15 +569,74 @@
         --ahover: rgb(217, 217, 217);
         --nametitle: rgb(183, 183, 183);
         --nameclr: #52489c;
-        --aboutclr:rgb(191, 191, 191);
+        --aboutclr: rgb(191, 191, 191);
         --malai: cubic-bezier(1, 0.42, 0.36, 0.95);
         --ease: cubic-bezier(0.47, 1.16, 0.88, 0.49);
         animation: clr 2s 0s ease infinite forwards, btn 2s 0s ease infinite;
     }
 
+    .projects-container {
+        /* background: blue; */
+        margin-top: 150px;
+margin-bottom: 50px;
+        height: max-content;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+    }
+
+    .project-card {
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        margin: 10px;
+        overflow: hidden;
+        /* background: red; */
+        cursor: pointer;
+        max-width: 300px;
+        transition: transform 0.3s ease-in-out;
+    }
+    
+    .project-card:hover {
+        /* transform: translateY(-5px); */
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+    }
+    
+    .project-img {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .project-img img {
+        width: 300px;
+
+        height: 180px;
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .project-card:hover .project-img img {
+        transform: scale(1.1);
+    }
+
+    .project-details {
+        padding: 20px;
+    }
+
+    .project-title {
+        font-size: 20px;
+        margin-bottom: 10px;
+        color: #333;
+    }
+
+    .project-overview {
+        font-size: 16px;
+        color: #666;
+        text-align: left;
+    }
+
+
     .darktheme {
 
-        --aboutclr:rgb(61 61 61);
+        --aboutclr: rgb(61 61 61);
 
         transition: 0.3s;
         --ahover: rgb(40, 40, 40);
@@ -667,7 +775,7 @@
     .con {
         display: flex;
         width: 100vw;
-        height: 860px;
+        height: 80vh;
         margin-top: 80px;
     }
 
@@ -1372,15 +1480,15 @@
 
     .portfolio {
         position: relative;
-        height: 500px;
+        height: 600px;
         width: 100%;
     }
 
     .about {
         position: relative;
         width: 100vw;
-        height:610px;
-        background:linear-gradient(to top,var(--aboutclr),transparent);
+        height: 610px;
+        background: linear-gradient(to top, var(--aboutclr), transparent);
         display: flex;
         padding-top: 150px;
         padding-bottom: 50px;
@@ -1396,16 +1504,17 @@
         /* margin-right: 50px; */
         clip-path: circle(38%);
     }
-    
+
     .aboutone img {
         transition: 0.4s;
         width: 380px;
         transform-origin: top;
-        background:linear-gradient(transparent,var(--aboutclr));
+        background: linear-gradient(transparent, var(--aboutclr));
     }
-    .aboutone img:hover{
+
+    .aboutone img:hover {
         scale: 1.1;
-       
+
     }
 
     .abouttwo {
@@ -1422,12 +1531,12 @@
         text-align: justify;
         padding-right: 150px;
     }
-    p span{
-        color:var(--darkclr);
+
+    p span {
+        color: var(--darkclr);
         font-size: 20px;
-        initial-letter:var(--headingbg) ;
+        initial-letter: var(--headingbg);
     }
-  
 </style>
 
 </html>
